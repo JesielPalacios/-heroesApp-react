@@ -10,7 +10,7 @@ import { Heroes } from "./Heroes";
 import { About } from "./About";
 import { NotFound } from "./NotFound";
 import { Heroe } from "./Heroe";
-import { BusquedaHeroe } from "./BusquedaHeroe";
+import { BusquedaHeroes } from "./BusquedaHeroe";
 import data from "../assets/data/heroes.json";
 
 export const AppRouter = () => (
@@ -24,7 +24,7 @@ export const AppRouter = () => (
                 <Heroe data={data} />
             </Route>
             <Route path="/buscar/:termino">
-                <BusquedaHeroe data={data} />
+                <BusquedaHeroes data={data} />
             </Route>
             <Route path="/about" component={About} />
             <Route component={NotFound} />

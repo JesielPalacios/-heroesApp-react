@@ -2,22 +2,24 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 export const Navegabar = () => {
+
     const onSubmit = e => {
-        e.preventDefault(); e.target.reset()
-    },
+        e.preventDefault(); 
+        // e.target.reset()
+    };
 
-    [termino, setTermino] = useState({
+    const [termino, setTermino] = useState({
         termino: ''
-    })
+    });
 
-    let valor = termino.buscarTexto;
-    
     const handleInputChange = (e) => {
         setTermino({
             ...termino,
             [e.target.name] : e.target.value,
-        })
-    }
+        });
+    };
+
+    let valor = termino.buscarTexto;
 
     return (
         <div>
@@ -26,9 +28,9 @@ export const Navegabar = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <Link Link className="navbar-brand">
-                    <img src="../../assets/img/A-64.png" alt="" width="30" height="24" className="d-inline-block align-top" />
-                        {/* Navbar */}
+                    <Link className="navbar-brand">
+                        <img src="/img-heroes/A-64.png" alt="" width="30" height="24" className="d-inline-block align-top" />
+                            {/* Navbar */}
                     </Link>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -54,9 +56,9 @@ export const Navegabar = () => {
                                     <li><Link className="dropdown-item">Something else here</Link></li>
                                 </ul>
                             </li>
-                            {/* <li className="nav-item">
-                                <a className="nav-link disabled" activeClassName="active" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li> */}
+                            <li className="nav-item">
+                                <Link className="nav-link disabled" tabIndex="-1" aria-disabled="true">Disabled</Link>
+                            </li>
                         </ul>
                         <form onSubmit={onSubmit} className="d-flex">
                             <input
@@ -66,13 +68,10 @@ export const Navegabar = () => {
                                 placeholder="Buscar Héroe"
                                 aria-label="Search"
                                 onChange={handleInputChange}
-                                // ref={enviarFormulario}
                             />
                             <Link
                                 to={`/buscar/${valor}`}
                                 className="btn btn-outline-primary btn-block"
-                                type="submit"
-                                // onClick={}
                             >
                                 Buscar
                             </Link>

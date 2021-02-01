@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 
-export const BusquedaHeroe = () => {
+export const BusquedaHeroes = () => {
     const {termino} = useParams();
     return (
         <div>

@@ -29,7 +29,8 @@ export const Navegabar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <Link className="navbar-brand">
-                        <img src="/img-heroes/A-64.png" alt="" width="30" height="24" className="d-inline-block align-top" />
+                    {/* <img src="/img-heroes/A-64.png" alt="" width="30" height="24" className="d-inline-block align-top" /> */}
+                    <img src="/img-heroes/A-64.png" width="30" height="30" alt="" loading="lazy" />
                             {/* Navbar */}
                     </Link>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

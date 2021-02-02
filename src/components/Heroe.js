@@ -12,7 +12,7 @@ export const Heroe = (props) => {
             <hr />
             <div className="row animated fadeIn fas">
                 <div className="col-md-4">
-                    <img src={heroes[id].img} className="card-img-top" alt={`Imagen de ${heroes[id].nombre}`} />
+                    <img src={heroes[id].img} className="img-fluid" alt={`Imagen de ${heroes[id].nombre}`} />
                     <br /><br />
                     <Link to={`/heroes`} className="btn btn-outline-danger btn-block">Regresar</Link>
                 </div>

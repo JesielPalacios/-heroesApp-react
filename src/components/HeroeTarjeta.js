@@ -6,7 +6,7 @@ export const HeroeTarjeta = (props) => {
     return (
         <div>
             {props.data.heroes.map((heroe, index) => (
-                <div key={index} className="card animated fadeIn fast">
+                <div key={index} className="card animated fadeIn fast" style={{width: 18+'rem'}}>
                     <img src={heroe.img} className="card-img-top" alt={`Imagen de ${heroe.nombre}`} />
                     <div className="card-body">
                         <h5 className="card-title">{ heroe.nombre }</h5>

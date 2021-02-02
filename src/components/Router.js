@@ -19,7 +19,7 @@ export const AppRouter = () => (
         <Switch>
             <Route exact path="/" component={App} />
             <Route path="/heroes" component={Heroes} />
-            {/* <Route path="/heroe/:id" component={Heroe} /> */}
+            {/* <Route path="/heroe/:id" component={Heroe } /> */}
             <Route path="/heroe/:id">
                 <Heroe data={data} />
             </Route>
